@@ -1,0 +1,42 @@
+type Book {
+    title: String
+    author: String
+  }
+
+  type User {
+    id: ID!
+    name: String!
+  }
+
+  type Query {
+    books: [Book],
+    user(id: ID!): User,
+    users: [User]
+  }
+
+ enum AllowedBook {
+  PROGRAMMING
+  ARCHITECTURE
+  DEVOPS
+  TESTING
+  DATABASES
+  }
+
+ 
+
+  input NewBook {
+    title: String!
+    author: String!
+  }
+
+interface MutationResponse {
+  code: String!
+  
+  success: Boolean!
+
+  message: String!
+}
+
+  type Mutation {
+     addBook(title: String!, author: String!): Book
+  }
