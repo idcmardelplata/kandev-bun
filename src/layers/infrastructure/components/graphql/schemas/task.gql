@@ -1,0 +1,11 @@
+type Task {
+ title: String!
+ description: String
+ creation_date: String
+ expiration_date: String
+ completed: Boolean
+}
+
+type Query {
+ tasks: [Task]
+}

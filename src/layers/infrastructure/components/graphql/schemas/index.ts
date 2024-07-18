@@ -1,7 +1,10 @@
-const loadSchema = (name: string) => `${__dirname}/${name}.gql`
+ const _loadSchema = async (name: string): Promise<string> => {
+  let file = Bun.file(`${__dirname}/${name}.gql`);
+  return await file.text();
+} 
 
-const bookSchema = loadSchema("book");
+const taskSchema = await _loadSchema("task")
 
 export  {
-  bookSchema,
-}
+   taskSchema
+};

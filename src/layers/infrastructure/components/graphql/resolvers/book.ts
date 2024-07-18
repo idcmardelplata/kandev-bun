@@ -11,7 +11,6 @@ const bookResolver: Resolver = {
     }
   },
   Mutation: {},
-  Subscription: {}
 };
 
 export default bookResolver;
