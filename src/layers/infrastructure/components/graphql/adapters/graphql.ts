@@ -1,6 +1,6 @@
 import  { ApolloServer }  from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import type { Server } from "../interfaces/server";
+import type Server from "../interfaces/server";
 import { taskSchema } from "../schemas";
 import taskResolver from "../resolvers/task";
 

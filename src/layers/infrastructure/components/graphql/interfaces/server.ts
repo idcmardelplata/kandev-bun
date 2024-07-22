@@ -1,3 +1,3 @@
-export interface Server {
+export default interface Server {
   start(port: number): Promise<void>;
 };

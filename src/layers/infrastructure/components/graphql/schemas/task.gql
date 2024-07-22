@@ -9,3 +9,7 @@ type Task {
 type Query {
  tasks: [Task]
 }
+
+type Mutation {
+  create(title: String!, description: String!, creation_date: String!, expiration_date: String!, completed: Boolean!): Task!
+}
